@@ -1,0 +1,42 @@
+#ifndef __XLBE_ANIMATION_KEYFRAME_H__
+#define __XLBE_ANIMATION_KEYFRAME_H__
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//作者：徐林炳
+//QQ: 597389076
+//mail: creednew2000@163.com
+
+//请尊重作者辛勤劳动， 勿删，谢谢。
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+#include "XlbePrereqs.h"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+namespace xlbe {
+
+class Sprite_Resource;
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Animation_Keyframe
+{
+public:
+    Animation_Keyframe(Sprite_Resource *res, float time);
+    Animation_Keyframe(const Animation_Keyframe &frame);
+    ~Animation_Keyframe();
+
+public:
+    Sprite_Resource *get_value() const { return value_; }
+    void set_value(Sprite_Resource *res) { value_ = res; } 
+
+    float get_time() const { return time_; }
+    void set_time(float time)  { time_ = time; }
+
+public:
+    float time_;
+    Sprite_Resource *value_;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+#endif

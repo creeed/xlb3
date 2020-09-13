@@ -1,0 +1,526 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="xml">
+      <UniqueIdentifier>{de224a89-c284-4f61-a27c-774f0ac6e3a6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="xml\tinyxml">
+      <UniqueIdentifier>{5f53d4e7-21a9-45d3-8c8e-ac0d8e0ec613}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="provider">
+      <UniqueIdentifier>{49ce837a-b6ec-435b-9098-c53e6de44d0e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sound">
+      <UniqueIdentifier>{5f83ec1c-68e4-4365-82d3-d59c78f98d0b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="sound\fmod">
+      <UniqueIdentifier>{eacd0c04-c3f3-4e1e-bdc9-99092afb3daf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="render">
+      <UniqueIdentifier>{e22008cb-29f2-46b8-ac1b-f198946a9cf5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="widget">
+      <UniqueIdentifier>{b138e379-62cd-482e-abce-39ae3f7116f1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\Xlbe.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeAction.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeActionAnimation.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeActionCombine.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeActionInstant.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeActionInterval.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeAnimationKeyframe.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeAnimationResource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeAnimationResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeAnimationXmlHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeCamera.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeColor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeColorRect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeConfig.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeConfigOption.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeContainerFile.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeCountTimer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeException.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeFont.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeFontManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeFontXmlHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeFrameListener.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeImageFont.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeIni.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeInput.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeLabel.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeLayer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeMouseCursor.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeMusic.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeMusicManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeNode.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbePoint.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbePrereqs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRawDataContainer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRect.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRenderPrimitive.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRenderSystem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRenderTexture.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRenderWindow.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeResource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeResourceLoad.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeResourceProvider.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeRoot.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeScene.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSceneManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSingleton.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSize.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSound.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSoundManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSoundResource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSprite.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSpriteResource.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSpriteResourceManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeSpriteXmlHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeTick.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeTimeManager.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeTtfFont.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeTypes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeUtility.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeVector.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeWindowEventUtilities.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeXmlAttributes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeXmlHandler.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeXmlParser.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XlbeXmlSerializer.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\XmlParserModules\XlbeTinyXMLParser.h">
+      <Filter>xml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\XmlParserModules\xlbetinyxml\tinystr.h">
+      <Filter>xml\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\XmlParserModules\xlbetinyxml\tinyxml.h">
+      <Filter>xml\tinyxml</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceProvider\XlbeDefualtResourceProvider.h">
+      <Filter>provider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\ResourceProvider\XlbeEncryptResourceProvider.h">
+      <Filter>provider</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeFmodMusic.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeFmodMusicManager.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSound.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSoundManager.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSoundResource.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\SoundModules\XlbeSoundXmlHandler.h">
+      <Filter>sound</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SoundModules\fmod\fmod.h">
+      <Filter>sound\fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SoundModules\fmod\fmod_errors.h">
+      <Filter>sound\fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SoundModules\fmod\fmoddyn.h">
+      <Filter>sound\fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\src\SoundModules\fmod\wincompat.h">
+      <Filter>sound\fmod</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RenderModules\XlbeRenderSystemD3d9.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RenderModules\XlbeRenderTextureD3d9.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\RenderModules\XlbeRenderWindowD3d9.h">
+      <Filter>render</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeButton.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeEdit.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeFocusHandler.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeProgress.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeSlider.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeStatic.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeUIBuilder.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeWidget.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeWidgetListener.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeWidgetManager.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+    <ClInclude Include="..\include\Widgets\XlbeWindow.h">
+      <Filter>widget</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\XmlParserModules\XlbeTinyXMLParser.cpp">
+      <Filter>xml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinystr.cpp">
+      <Filter>xml\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxml.cpp">
+      <Filter>xml\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxmlerror.cpp">
+      <Filter>xml\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxmlparser.cpp">
+      <Filter>xml\tinyxml</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ResourceProvider\XlbeDefualtResourceProvider.cpp">
+      <Filter>provider</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\ResourceProvider\XlbeEncryptResourceProvider.cpp">
+      <Filter>provider</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeFmodMusic.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeFmodMusicManager.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSound.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSoundManager.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSoundResource.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\SoundModules\XlbeSoundXmlHandler.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeTimeManager.cpp">
+      <Filter>sound</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RenderModules\XlbeRenderSystemD3d9.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RenderModules\XlbeRenderTextureD3d9.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\RenderModules\XlbeRenderWindowD3d9.cpp">
+      <Filter>render</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeButton.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeEdit.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeFocusHandler.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeProgress.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeSlider.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeStatic.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeUIBuilder.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeWidget.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeWidgetManager.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\Widgets\XlbeWindow.cpp">
+      <Filter>widget</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeAction.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeActionAnimation.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeActionCombine.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeActionInstant.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeActionInterval.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeAnimationKeyframe.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeAnimationResource.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeAnimationResourceManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeAnimationXmlHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeCamera.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeContainerFile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeFont.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeFontManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeFontXmlHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeImageFont.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeIni.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeLabel.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeLayer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeMouseCursor.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeNode.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeRawDataContainer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeRect.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeRenderSystem.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeResourceLoad.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeResourceManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeRoot.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeScene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeSceneManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeSprite.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeSpriteResource.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeSpriteResourceManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeSpriteXmlHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeTtfFont.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeVector.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeWindowEventUtilities.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeXmlAttributes.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeXmlHandler.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeXmlParser.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\src\XlbeXmlSerializer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\src\SoundModules\fmod\fmodvc.lib">
+      <Filter>sound\fmod</Filter>
+    </Library>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{8D228DCF-5976-4BC7-8E25-CC2ACB17FBCE}</ProjectGuid>
+    <RootNamespace>xlbe</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>Debug\</OutDir>
+    <IntDir>Debug\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>Release\</OutDir>
+    <IntDir>Release\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>../include;../include/widgets;../src;../src/widgets;../include/RenderModules;../include/ResourceProvider;../include/SoundModules;../include/XmlParserModules;../src/RenderModules;../src/XmlParserModules;../src/ResourceProvider;../src/SoundModules;../dependencies/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_USRDLL;XLBE_NONCLIENT_BUILD;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9d.lib;Winmm.lib;../dependencies/freetype/objs/freetyped.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../运行/Debug/xlbed3.dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <ProgramDatabaseFile>$(OutDir)xlbe.pdb</ProgramDatabaseFile>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>..\..\..\链接库\xlbed3.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y  ..\..\..\链接库\xlbed3.lib ..\..\..\开发库\Lib\xlbed3.lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>../include;../include/widgets;../src;../src/widgets;../include/RenderModules;../include/ResourceProvider;../include/SoundModules;../include/XmlParserModules;../src/RenderModules;../src/XmlParserModules;../src/ResourceProvider;../src/SoundModules;../dependencies/freetype/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_USRDLL;XLBE_NONCLIENT_BUILD;NOMINMAX;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d9.lib;d3dx9.lib;Winmm.lib;../dependencies/freetype/objs/freetype.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>../../../运行/Release/hgex.dll</OutputFile>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention />
+      <ImportLibrary>..\..\..\链接库\xlbe3.lib</ImportLibrary>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+    <PostBuildEvent>
+      <Command>copy /y  ..\..\..\链接库\xlbe3.lib ..\..\..\开发库\Lib\xlbe3.lib</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\include\RenderModules\XlbeRenderSystemD3d9.h" />
+    <ClInclude Include="..\include\RenderModules\XlbeRenderTextureD3d9.h" />
+    <ClInclude Include="..\include\RenderModules\XlbeRenderWindowD3d9.h" />
+    <ClInclude Include="..\include\ResourceProvider\XlbeDefualtResourceProvider.h" />
+    <ClInclude Include="..\include\ResourceProvider\XlbeEncryptResourceProvider.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeFmodMusic.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeFmodMusicManager.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSound.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSoundManager.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeFmodSoundResource.h" />
+    <ClInclude Include="..\include\SoundModules\XlbeSoundXmlHandler.h" />
+    <ClInclude Include="..\include\Widgets\XlbeButton.h" />
+    <ClInclude Include="..\include\Widgets\XlbeEdit.h" />
+    <ClInclude Include="..\include\Widgets\XlbeFocusHandler.h" />
+    <ClInclude Include="..\include\Widgets\XlbeProgress.h" />
+    <ClInclude Include="..\include\Widgets\XlbeSlider.h" />
+    <ClInclude Include="..\include\Widgets\XlbeStatic.h" />
+    <ClInclude Include="..\include\Widgets\XlbeUIBuilder.h" />
+    <ClInclude Include="..\include\Widgets\XlbeWidget.h" />
+    <ClInclude Include="..\include\Widgets\XlbeWidgetListener.h" />
+    <ClInclude Include="..\include\Widgets\XlbeWidgetManager.h" />
+    <ClInclude Include="..\include\Widgets\XlbeWindow.h" />
+    <ClInclude Include="..\include\Xlbe.h" />
+    <ClInclude Include="..\include\XlbeAction.h" />
+    <ClInclude Include="..\include\XlbeActionAnimation.h" />
+    <ClInclude Include="..\include\XlbeActionCombine.h" />
+    <ClInclude Include="..\include\XlbeActionInstant.h" />
+    <ClInclude Include="..\include\XlbeActionInterval.h" />
+    <ClInclude Include="..\include\XlbeAnimationKeyframe.h" />
+    <ClInclude Include="..\include\XlbeAnimationResource.h" />
+    <ClInclude Include="..\include\XlbeAnimationResourceManager.h" />
+    <ClInclude Include="..\include\XlbeAnimationXmlHandler.h" />
+    <ClInclude Include="..\include\XlbeCamera.h" />
+    <ClInclude Include="..\include\XlbeColor.h" />
+    <ClInclude Include="..\include\XlbeColorRect.h" />
+    <ClInclude Include="..\include\XlbeConfig.h" />
+    <ClInclude Include="..\include\XlbeConfigOption.h" />
+    <ClInclude Include="..\include\XlbeContainerFile.h" />
+    <ClInclude Include="..\include\XlbeCountTimer.h" />
+    <ClInclude Include="..\include\XlbeException.h" />
+    <ClInclude Include="..\include\XlbeFont.h" />
+    <ClInclude Include="..\include\XlbeFontManager.h" />
+    <ClInclude Include="..\include\XlbeFontXmlHandler.h" />
+    <ClInclude Include="..\include\XlbeFrameListener.h" />
+    <ClInclude Include="..\include\XlbeImageFont.h" />
+    <ClInclude Include="..\include\XlbeIni.h" />
+    <ClInclude Include="..\include\XlbeInput.h" />
+    <ClInclude Include="..\include\XlbeLabel.h" />
+    <ClInclude Include="..\include\XlbeLayer.h" />
+    <ClInclude Include="..\include\XlbeMouseCursor.h" />
+    <ClInclude Include="..\include\XlbeMusic.h" />
+    <ClInclude Include="..\include\XlbeMusicManager.h" />
+    <ClInclude Include="..\include\XlbeNode.h" />
+    <ClInclude Include="..\include\XlbePoint.h" />
+    <ClInclude Include="..\include\XlbePrereqs.h" />
+    <ClInclude Include="..\include\XlbeRawDataContainer.h" />
+    <ClInclude Include="..\include\XlbeRect.h" />
+    <ClInclude Include="..\include\XlbeRenderPrimitive.h" />
+    <ClInclude Include="..\include\XlbeRenderSystem.h" />
+    <ClInclude Include="..\include\XlbeRenderTexture.h" />
+    <ClInclude Include="..\include\XlbeRenderWindow.h" />
+    <ClInclude Include="..\include\XlbeResource.h" />
+    <ClInclude Include="..\include\XlbeResourceLoad.h" />
+    <ClInclude Include="..\include\XlbeResourceManager.h" />
+    <ClInclude Include="..\include\XlbeResourceProvider.h" />
+    <ClInclude Include="..\include\XlbeRoot.h" />
+    <ClInclude Include="..\include\XlbeScene.h" />
+    <ClInclude Include="..\include\XlbeSceneManager.h" />
+    <ClInclude Include="..\include\XlbeSingleton.h" />
+    <ClInclude Include="..\include\XlbeSize.h" />
+    <ClInclude Include="..\include\XlbeSound.h" />
+    <ClInclude Include="..\include\XlbeSoundManager.h" />
+    <ClInclude Include="..\include\XlbeSoundResource.h" />
+    <ClInclude Include="..\include\XlbeSprite.h" />
+    <ClInclude Include="..\include\XlbeSpriteResource.h" />
+    <ClInclude Include="..\include\XlbeSpriteResourceManager.h" />
+    <ClInclude Include="..\include\XlbeSpriteXmlHandler.h" />
+    <ClInclude Include="..\include\XlbeTick.h" />
+    <ClInclude Include="..\include\XlbeTimeManager.h" />
+    <ClInclude Include="..\include\XlbeTtfFont.h" />
+    <ClInclude Include="..\include\XlbeTypes.h" />
+    <ClInclude Include="..\include\XlbeUtility.h" />
+    <ClInclude Include="..\include\XlbeVector.h" />
+    <ClInclude Include="..\include\XlbeWindowEventUtilities.h" />
+    <ClInclude Include="..\include\XlbeXmlAttributes.h" />
+    <ClInclude Include="..\include\XlbeXmlHandler.h" />
+    <ClInclude Include="..\include\XlbeXmlParser.h" />
+    <ClInclude Include="..\include\XlbeXmlSerializer.h" />
+    <ClInclude Include="..\include\XmlParserModules\XlbeTinyXMLParser.h" />
+    <ClInclude Include="..\src\SoundModules\fmod\fmod.h" />
+    <ClInclude Include="..\src\SoundModules\fmod\fmoddyn.h" />
+    <ClInclude Include="..\src\SoundModules\fmod\fmod_errors.h" />
+    <ClInclude Include="..\src\SoundModules\fmod\wincompat.h" />
+    <ClInclude Include="..\src\XmlParserModules\xlbetinyxml\tinystr.h" />
+    <ClInclude Include="..\src\XmlParserModules\xlbetinyxml\tinyxml.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\src\RenderModules\XlbeRenderSystemD3d9.cpp" />
+    <ClCompile Include="..\src\RenderModules\XlbeRenderTextureD3d9.cpp" />
+    <ClCompile Include="..\src\RenderModules\XlbeRenderWindowD3d9.cpp">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../include;../src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\src\ResourceProvider\XlbeDefualtResourceProvider.cpp" />
+    <ClCompile Include="..\src\ResourceProvider\XlbeEncryptResourceProvider.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeFmodMusic.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeFmodMusicManager.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSound.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSoundManager.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeFmodSoundResource.cpp" />
+    <ClCompile Include="..\src\SoundModules\XlbeSoundXmlHandler.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeButton.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeEdit.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeFocusHandler.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeProgress.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeSlider.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeStatic.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeUIBuilder.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeWidget.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeWidgetManager.cpp" />
+    <ClCompile Include="..\src\Widgets\XlbeWindow.cpp" />
+    <ClCompile Include="..\src\XlbeAction.cpp" />
+    <ClCompile Include="..\src\XlbeActionAnimation.cpp" />
+    <ClCompile Include="..\src\XlbeActionCombine.cpp" />
+    <ClCompile Include="..\src\XlbeActionInstant.cpp" />
+    <ClCompile Include="..\src\XlbeActionInterval.cpp" />
+    <ClCompile Include="..\src\XlbeAnimationKeyframe.cpp" />
+    <ClCompile Include="..\src\XlbeAnimationResource.cpp" />
+    <ClCompile Include="..\src\XlbeAnimationResourceManager.cpp" />
+    <ClCompile Include="..\src\XlbeAnimationXmlHandler.cpp" />
+    <ClCompile Include="..\src\XlbeCamera.cpp" />
+    <ClCompile Include="..\src\XlbeContainerFile.cpp" />
+    <ClCompile Include="..\src\XlbeFont.cpp" />
+    <ClCompile Include="..\src\XlbeFontManager.cpp" />
+    <ClCompile Include="..\src\XlbeFontXmlHandler.cpp" />
+    <ClCompile Include="..\src\XlbeImageFont.cpp" />
+    <ClCompile Include="..\src\XlbeIni.cpp" />
+    <ClCompile Include="..\src\XlbeLabel.cpp" />
+    <ClCompile Include="..\src\XlbeLayer.cpp" />
+    <ClCompile Include="..\src\XlbeMouseCursor.cpp" />
+    <ClCompile Include="..\src\XlbeNode.cpp" />
+    <ClCompile Include="..\src\XlbeRawDataContainer.cpp" />
+    <ClCompile Include="..\src\XlbeRect.cpp" />
+    <ClCompile Include="..\src\XlbeRenderSystem.cpp" />
+    <ClCompile Include="..\src\XlbeResourceLoad.cpp" />
+    <ClCompile Include="..\src\XlbeResourceManager.cpp" />
+    <ClCompile Include="..\src\XlbeRoot.cpp" />
+    <ClCompile Include="..\src\XlbeScene.cpp" />
+    <ClCompile Include="..\src\XlbeSceneManager.cpp" />
+    <ClCompile Include="..\src\XlbeSprite.cpp" />
+    <ClCompile Include="..\src\XlbeSpriteResource.cpp" />
+    <ClCompile Include="..\src\XlbeSpriteResourceManager.cpp" />
+    <ClCompile Include="..\src\XlbeSpriteXmlHandler.cpp" />
+    <ClCompile Include="..\src\XlbeTimeManager.cpp" />
+    <ClCompile Include="..\src\XlbeTtfFont.cpp" />
+    <ClCompile Include="..\src\XlbeVector.cpp" />
+    <ClCompile Include="..\src\XlbeWindowEventUtilities.cpp" />
+    <ClCompile Include="..\src\XlbeXmlAttributes.cpp" />
+    <ClCompile Include="..\src\XlbeXmlHandler.cpp" />
+    <ClCompile Include="..\src\XlbeXmlParser.cpp" />
+    <ClCompile Include="..\src\XlbeXmlSerializer.cpp" />
+    <ClCompile Include="..\src\XmlParserModules\XlbeTinyXMLParser.cpp" />
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinystr.cpp" />
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxml.cpp" />
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="..\src\XmlParserModules\xlbetinyxml\tinyxmlparser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Library Include="..\src\SoundModules\fmod\fmodvc.lib" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

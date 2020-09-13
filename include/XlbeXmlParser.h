@@ -1,0 +1,45 @@
+#ifndef __XLBE_XML_PARSER_H__
+#define __XLBE_XML_PARSER_H__
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//作者：徐林炳
+//QQ: 597389076
+//mail: creednew2000@163.com
+
+//请尊重作者辛勤劳动， 勿删，谢谢。
+
+////////////////////////////////////////////////////////////////////////////////////////////
+#include "XlbePrereqs.h"
+#include "XlbeXmlHandler.h"
+
+////////////////////////////////////////////////////////////////////////////////////////////
+namespace xlbe {
+
+////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Xml_Parser 
+{
+public:
+    Xml_Parser();
+    virtual ~Xml_Parser();
+
+    bool initialise();
+    void cleanup();
+
+    virtual void parse_xml_file(Xml_Handler& handler, const std::string& filename) = 0;
+
+    const std::string& get_identifier() const;
+
+protected:
+    virtual bool initialise_impl() = 0;
+    virtual void cleanup_impl() = 0;
+
+    std::string identifier_;                
+
+private:
+    bool initialised_;     
+};
+
+////////////////////////////////////////////////////////////////////////////////////////////
+}
+
+#endif

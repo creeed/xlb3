@@ -1,0 +1,80 @@
+#ifndef __XLB_ACTION_INSTANT_H__
+#define __XLB_ACTION_INSTANT_H__
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+//作者：徐林炳
+//QQ: 597389076
+//mail: creednew2000@163.com
+
+//请尊重作者辛勤劳动， 勿删，谢谢。
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+#include "rak/functional_fun.h"
+
+#include "XlbePrereqs.h"
+#include "XlbePoint.h"
+#include "XlbeAction.h"
+#include "XlbeActionInterval.h"
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+namespace xlbe {
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Instant : public Action_Interval
+{
+public:
+    Action_Instant():Action_Interval(0) {}
+    virtual ~Action_Instant() {}
+
+public:
+    virtual void step(float dt) { update(1.0f); }
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Show : public Action_Instant
+{
+public:
+    virtual void start_with_target(Node *target);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Hide : public Action_Instant
+{
+public:
+    virtual void start_with_target(Node *target);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Toggle_Visibility : public Action_Instant
+{
+public:
+    virtual void start_with_target(Node *target);
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Place : public Action_Instant
+{
+public:
+    Action_Place(Point p):position_(p) {}
+    virtual void start_with_target(Node *target);
+
+private:
+    Point position_;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+class Xlbe_Export Action_Func : public Action_Instant
+{
+    typedef rak::function_base2<bool, Node*, uint32_t> *Slot_Func;
+
+public:
+    Action_Func(Slot_Func slot, uint32_t data):slot_func_(slot) { data_ = data; }
+    virtual void start_with_target(Node *target);
+
+private:
+    Slot_Func slot_func_;
+};
+
+/////////////////////////////////////////////////////////////////////////////////////////////////
+}
+#endif
